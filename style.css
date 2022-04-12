@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    width: 100vh;
+    
+  }
+
+  body{
+
+  
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.h2{
+
+color: grey;
+font-size: 40px;
+
+margin-top: 20px;
+margin-left: 50px;
+margin-bottom: 20px;
+}
+
+.divclass{
+
+    display: flex;
+    flex-direction: column;
+ 
+ 
+
+
+}
+
+.keep{
+    border-color:  white;
+    background-color: rgb(150, 242, 233);
+    border-style: solid;
+    width: 150px;
+    color: grey;
+    font-size: 20px;
+    cursor: pointer;
+
+
+
+}
+
+.datos{
+
+    border-color:  white;
+    background-color: rgb(150, 242, 233);
+    border-style: solid;
+    width: 160px;
+    font-size: 20px;
+    color: grey;
+    cursor: pointer;
+
+}
+
+
