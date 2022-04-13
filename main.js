@@ -10,6 +10,7 @@ fetch(url)
   .then(function (data) {
     console.log(data.results);
     const usuarios = [];
+    const usuario = { name: "feiruz" };
     const city = data.results[0].location.city;
     const name = data.results[0].name.first + " " + data.results[0].name.last;
     const image = data.results[0].picture.large;
