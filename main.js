@@ -15,4 +15,8 @@ fetch(url)
     const image = data.results[0].picture.medium;
     const userName = data.results[0].login.username;
     console.log(userName);
+    const results = document.querySelector("#results");
+    results.innerHTML = "<h2>" + userName + "</h2>";
   });
+
+//console.log(results);
