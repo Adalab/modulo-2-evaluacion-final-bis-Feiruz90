@@ -9,13 +9,16 @@ fetch(url)
 
   .then(function (data) {
     const usuarios = [];
-    const usuario = {
-      name: data.results[0].name.first + " " + data.results[0].name.last,
-      city: data.results[0].location.city,
-      image: data.results[0].picture.large,
-      userName: data.results[0].login.username,
-    };
-    usuarios.push(usuario);
+    for (const result of data.results) {
+      const usuario = {
+        name: result.name.first + " " + data.results[0].name.last,
+        city: result.location.city,
+        image: result.picture.large,
+        userName: result.login.username,
+      };
+      usuarios.push(usuario);
+    }
+
     console.log(usuarios);
     /*const city = 
     const image = 
