@@ -8,13 +8,18 @@ fetch(url)
   })
 
   .then(function (data) {
-    console.log(data.results);
     const usuarios = [];
-    const usuario = { name: "feiruz" };
-    const city = data.results[0].location.city;
-    const name = data.results[0].name.first + " " + data.results[0].name.last;
-    const image = data.results[0].picture.large;
-    const userName = data.results[0].login.username;
+    const usuario = {
+      name: data.results[0].name.first + " " + data.results[0].name.last,
+      city: data.results[0].location.city,
+      image: data.results[0].picture.large,
+      userName: data.results[0].login.username,
+    };
+    usuarios.push(usuario);
+    console.log(usuarios);
+    /*const city = 
+    const image = 
+    const userName = 
     console.log(userName);
     const results = document.querySelector("#results");
 
@@ -28,7 +33,7 @@ fetch(url)
 
      `;
 
-    results.innerHTML = html;
+    results.innerHTML = html;*/
   });
 
 //console.log(results);
