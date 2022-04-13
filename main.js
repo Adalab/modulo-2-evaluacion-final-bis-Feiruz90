@@ -12,11 +12,22 @@ fetch(url)
     const usuarios = [];
     const city = data.results[0].location.city;
     const name = data.results[0].name.first + " " + data.results[0].name.last;
-    const image = data.results[0].picture.medium;
+    const image = data.results[0].picture.large;
     const userName = data.results[0].login.username;
     console.log(userName);
     const results = document.querySelector("#results");
-    results.innerHTML = "<h2>" + userName + "</h2>";
+
+    const html = `
+    <li>
+     <h2> ${userName}</h2> 
+     <div>${name}</div>
+     <div>${city}</div>
+     <div> <img src="${image}" alt=""> </div>
+     </li>
+
+     `;
+
+    results.innerHTML = html;
   });
 
 //console.log(results);
