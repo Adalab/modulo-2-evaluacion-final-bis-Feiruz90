@@ -11,12 +11,28 @@ fetch(url)
     const usuarios = [];
     for (const result of data.results) {
       const usuario = {
-        name: result.name.first + " " + data.results[0].name.last,
+        name: result.name.first + " " + result.name.last,
         city: result.location.city,
         image: result.picture.large,
         userName: result.login.username,
       };
       usuarios.push(usuario);
+    }
+    for (const usuario of usuarios) {
+      console.log(usuario);
+      const results = document.querySelector("#results");
+
+      const html = `
+    <li>
+     <h2> ${usuario.userName}</h2> 
+     <div>${usuario.name}</div>
+     <div>${usuario.city}</div>
+     <div> <img src="${usuario.image}" alt=""> </div>
+     </li>
+
+     `;
+
+      results.innerHTML = html;
     }
 
     console.log(usuarios);
