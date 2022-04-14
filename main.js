@@ -1,8 +1,8 @@
 "use strict";
 
-const url = "https://randomuser.me/api/?results=10";
+const urlServer = "https://randomuser.me/api/?results=10";
 
-fetch(url)
+fetch(urlServer)
   .then(function (response) {
     return response.json();
   })
