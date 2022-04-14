@@ -26,13 +26,13 @@ fetch(url)
     <li>
      <h2> ${usuario.userName}</h2> 
      <div>${usuario.name}</div>
-     <div>${usuario.city}</div>
+     <div>${usuario.citycity}</div>
      <div> <img src="${usuario.image}" alt=""> </div>
      </li>
 
      `;
 
-      results.innerHTML = html;
+      results.innerHTML = results.innerHTML + html;
     }
 
     console.log(usuarios);
