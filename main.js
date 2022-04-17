@@ -15,7 +15,7 @@ fetch(urlServer)
     const usuarios = [];
     for (const result of data.results) {
       const usuario = {
-        // he utilizado OBJETO porque es un tipo de variable y dentro tiene nombres.
+        // he utilizado OBJETO porque es un tipo de variable y dentro tiene nombres para poder llamarlo
         name: result.name.first + " " + result.name.last,
         city: result.location.city,
         image: result.picture.large,
@@ -32,7 +32,7 @@ fetch(urlServer)
      <h2> ${usuario.userName}</h2> 
      <div>${usuario.name}</div>
      <div>${usuario.citycity}</div>
-     <div> <img src="${usuario.image}" alt=""> </div>
+     <div> <img class="image" src="${usuario.image}" alt=""> </div>
      </li>
 
      `;
