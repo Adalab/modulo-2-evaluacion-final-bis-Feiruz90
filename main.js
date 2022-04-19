@@ -5,11 +5,13 @@ const urlServer = "https://randomuser.me/api/?results=10";
 
 //Para coger a los 10 usuarios he hecho una peticion / request a la API
 fetch(urlServer)
+  //es la respuesta de la peticion
   .then(function (response) {
     // con responde hace que me extraiga el contenido y lo pase como un objeto ()
     return response.json();
   })
-  // este segundo THEN hace que coja los datos del servidor
+  // este segundo THEN hace que coja los datos del servidor- cuando han llegado los datoss al servidor y he dado esta estructura ( parsear)
+  //con data ya tengo todos los datos
   .then(function (data) {
     // he creado un objeto vacio y lo he guardado en la constante del usuario
     const usuarios = [];
@@ -28,7 +30,9 @@ fetch(urlServer)
       const results = document.querySelector("#results");
       // he creado una lista en html pero desde main.js para extraer los 10 usuarios.
       const html = `
+      
     <li>
+     
      <h2> ${usuario.userName}</h2> 
      <div>${usuario.name}</div>
      <div>${usuario.citycity}</div>
@@ -39,25 +43,4 @@ fetch(urlServer)
 
       results.innerHTML = results.innerHTML + html;
     }
-
-    console.log(usuarios);
-    /*const city = 
-    const image = 
-    const userName = 
-    console.log(userName);
-    const results = document.querySelector("#results");
-
-    const html = `
-    <li>
-     <h2> ${userName}</h2> 
-     <div>${name}</div>
-     <div>${city}</div>
-     <div> <img src="${image}" alt=""> </div>
-     </li>
-
-     `;
-
-    results.innerHTML = html;*/
   });
-
-//console.log(results);
