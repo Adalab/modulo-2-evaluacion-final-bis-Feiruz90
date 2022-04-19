@@ -1,5 +1,5 @@
 "use strict";
-
+const usuarios = [];
 //La url la he cogido del httpps que me da el enunciado API
 const urlServer = "https://randomuser.me/api/?results=10";
 
@@ -14,7 +14,7 @@ fetch(urlServer)
   //con data ya tengo todos los datos
   .then(function (data) {
     // he creado un objeto vacio y lo he guardado en la constante del usuario
-    const usuarios = [];
+
     for (const result of data.results) {
       const usuario = {
         // he utilizado OBJETO porque es un tipo de variable y dentro tiene nombres para poder llamarlo
@@ -22,6 +22,7 @@ fetch(urlServer)
         city: result.location.city,
         image: result.picture.large,
         userName: result.login.username,
+        isFriend: false,
       };
       usuarios.push(usuario);
     }
@@ -30,8 +31,10 @@ fetch(urlServer)
       const results = document.querySelector("#results");
       // he creado una lista en html pero desde main.js para extraer los 10 usuarios.
       const html = `
-      
-    <li>
+
+    <li onclick="addFriend()" >
+
+  
      
      <h2> ${usuario.userName}</h2> 
      <div>${usuario.name}</div>
@@ -44,3 +47,5 @@ fetch(urlServer)
       results.innerHTML = results.innerHTML + html;
     }
   });
+
+function addFriend() {}
