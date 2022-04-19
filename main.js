@@ -32,13 +32,13 @@ fetch(urlServer)
       // he creado una lista en html pero desde main.js para extraer los 10 usuarios.
       const html = `
 
-    <li onclick="addFriend()" >
+    <li onclick="addFriend('${usuario.userName}')" >
 
   
      
      <h2> ${usuario.userName}</h2> 
      <div>${usuario.name}</div>
-     <div>${usuario.citycity}</div>
+     <div>${usuario.city}</div>
      <div> <img class="image" src="${usuario.image}" alt=""> </div>
      </li>
 
@@ -48,4 +48,6 @@ fetch(urlServer)
     }
   });
 
-function addFriend() {}
+function addFriend(userName) {
+  console.log("el usuario es " + userName);
+}
