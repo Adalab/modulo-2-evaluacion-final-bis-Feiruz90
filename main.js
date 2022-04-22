@@ -7,7 +7,7 @@ const urlServer = "https://randomuser.me/api/?results=10";
 fetch(urlServer)
   //es la respuesta de la peticion
   .then(function (response) {
-    // con responde hace que me extraiga el contenido y lo pase como un objeto ()
+    // responde hace que me extraiga el contenido y lo pase como un objeto ()
     return response.json();
   })
   // este segundo THEN hace que coja los datos del servidor- cuando han llegado los datoss al servidor y he dado esta estructura ( parsear)
